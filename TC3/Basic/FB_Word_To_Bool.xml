@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2022-08-11T18:55:06.8051548" />
+  <contentHeader name="PLC1" modificationDateTime="2022-08-11T18:55:06.8051548">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="FB_Word_To_Bool" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="inWord">
+              <type>
+                <WORD />
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="outArrayOfBool">
+              <type>
+                <array>
+                  <dimension lower="0" upper="15" />
+                  <baseType>
+                    <BOOL />
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">outArrayOfBool[0] := inWord.0;
+outArrayOfBool[1] := inWord.1;
+outArrayOfBool[2] := inWord.2;
+outArrayOfBool[3] := inWord.3;
+outArrayOfBool[4] := inWord.4;
+outArrayOfBool[5] := inWord.5;
+outArrayOfBool[6] := inWord.6;
+outArrayOfBool[7] := inWord.7;
+outArrayOfBool[8] := inWord.8;
+outArrayOfBool[9] := inWord.9;
+outArrayOfBool[10] := inWord.10;
+outArrayOfBool[11] := inWord.11;
+outArrayOfBool[12] := inWord.12;
+outArrayOfBool[13] := inWord.13;
+outArrayOfBool[14] := inWord.14;
+outArrayOfBool[15] := inWord.15;</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_Word_To_Bool
+VAR_INPUT
+	inWord : WORD;
+END_VAR
+VAR_OUTPUT
+	outArrayOfBool : ARRAY [0..15] OF BOOL;
+END_VAR
+VAR
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>d3d8282c-3aea-460d-99cc-fe2a8ba427ea</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Object Name="FB_Word_To_Bool" ObjectId="d3d8282c-3aea-460d-99cc-fe2a8ba427ea" />
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>
